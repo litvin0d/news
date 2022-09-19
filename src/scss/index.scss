@@ -1,0 +1,74 @@
+@import "./variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: none;
+    font-family: "Rubik", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+a,
+span,
+p,
+b,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $font;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: $font;
+    max-height: 100vh;
+    font-weight: 500;
+
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ba4997, #86549d, #555691, #355277);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
