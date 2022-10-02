@@ -1,0 +1,71 @@
+@import "../../scss/variables";
+
+.root {
+    position: relative;
+    font-size: 18px;
+}
+
+.sortLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    span:nth-child(2) {
+        margin-left: 4px;
+        font-weight: 500;
+        color: $dark-gray;
+    }
+
+    svg {
+        margin-left: 4px;
+        fill: $dark-gray;
+        transition: transform .25s ease-in-out;
+        height: 12px;
+        width: 12px;
+        transform: rotate(180deg);
+
+        &.active {
+            transform: rotateX(360deg);
+            fill: $dark-gray;
+        }
+    }
+}
+
+.sortPopup {
+    position: absolute;
+    margin-top: 16px;
+    margin-left: 130px;
+    width: 225px;
+    background: $white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
+    animation: show .25s ease;
+    z-index: 1000;
+
+    @keyframes show {
+        from { opacity: 0 }
+        to { opacity: 1 }
+    }
+
+    ul {
+        overflow: hidden;
+
+        li {
+            padding: 16px;
+            color: $dark-gray;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background: $light-gray;
+        }
+
+        li.active {
+            background: $light-gray;
+            font-weight: 500;
+            color: $dark-gray;
+        }
+    }
+}
